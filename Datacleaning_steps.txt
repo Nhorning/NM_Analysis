@@ -1,0 +1,26 @@
+
+Steps to clean data in Nepal Monitor data set: 
+
+
+Data is probably already in flat file format. 
+
+
+Ideas:
+
+1. Compare the data in the No duplicates 2017 file to the no duplicates to the standard export.  What are the differences?
+
+
+2. Remove any duplicates from the 2016 data 
+    Find events in the same within the same place and time, and review manually. 
+    
+3. Append 2017 and 2016 data to ensure a dataset with now duplicates.
+
+4. Map dataset with old p-codes and boundaries to new boundaries, with new federal states?
+
+
+Actual steps: 
+
+Data import:  
+   Remove Errant comma from line 6055 of 1519759656_39328483.csv and save new file with cohrent file name - NM2016_17export.csv
+   Attempt reinport
+   Check in new files
