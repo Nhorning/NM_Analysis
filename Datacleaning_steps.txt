@@ -13,7 +13,7 @@ Ideas:
     
 3. Append 2017 and 2016 data to ensure a dataset with now duplicates.
 
-4. The UNRCO has provided a new system of place codes, which converts the old system of HLCIT codes used to identify political boundaries down to the ward level into the new official Federal state set up. Map the clean dataframes to the new federal structrues. 
+4. The UNRCO has provided a new system of place codes, which converts the old system of HLCIT codes used to identify political boundaries down to the ward level into the new official Federal state set up. Map the clean dataframes to the new federal structrues. (also do this for the population by ward data and update it on HDX)
 
 
 Actual steps: 
@@ -24,3 +24,11 @@ Data import:
    Check in new files
    
    Eyeball the difference in both. it's clear by the row numbers there are significant differences. Looks like the dates are different too. Let's convert them into a date series object. 
+   
+ Notes: 
+  
+  Empty rows? 
+  Columns? 
+  
+  If you do ones's and 0.  Don't worry about converting columns. 
+  Begin to run different functions in python, identify blanks / outliers, use code prove that their are or are not problems. 
