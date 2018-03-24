@@ -23,12 +23,16 @@ Data import:
    Attempt reinport
    Check in new files
    
-   Eyeball the difference in both. it's clear by the row numbers there are significant differences. Looks like the dates are different too. Let's convert them into a date series object. 
+   Eyeball the difference in both. it's clear by the row numbers there are significant differences. Looks like the dates are different too. Let's convert them into a date series object. Needed to find fuction for converting dates from xlsx format.
+
+    Remove times from both dfs so we are only working with dates
+    Reindex dfs by incident number and sort by index
+    write function to verify the dates are the same where the incident numbers are the same. 
    
  Notes: 
   
   Empty rows? 
   Columns? 
   
-  If you do ones's and 0.  Don't worry about converting columns. 
-  Begin to run different functions in python, identify blanks / outliers, use code prove that their are or are not problems. 
+  If you do ones's and 0....  Don't worry about converting columns. 
+  Begin to run different functions in python, identify blanks / outliers, use code to prove that there are or are not problems. 
