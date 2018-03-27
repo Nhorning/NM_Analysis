@@ -6,7 +6,7 @@ Data is probably already in flat file format.
 
 Ideas:
 
-1. For their own analysis NM has provided a cleaned up version of the 2017 data certified to have no duplicates. Compare the data in the No duplicates 2017 file to the no duplicates to the standard export.  What are the differences?
+1. For their own analysis NM has provided a cleaned up version of the 2017 data certified to have no duplicates. Compare the data in the No duplicates 2017 file to the standard export.  What are the differences?
 
 2. Remove any duplicates from the 2016 data 
     Find events in the same within the same place and time, and review manually. 
@@ -25,9 +25,11 @@ Data import:
    
    Eyeball the difference in both. it's clear by the row numbers there are significant differences. Looks like the dates are different too. Let's convert them into a date series object. Needed to find fuction for converting dates from xlsx format.
 
-    Remove times from both dfs so we are only working with dates
+    Remove normalize times so we are only working with dates
     Reindex dfs by incident number and sort by index
     write function to verify the dates are the same where the incident numbers are the same. 
+   
+   Find the diff between the data frames to see what was dropped and what was added. 
    
  Notes: 
   
