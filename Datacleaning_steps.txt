@@ -6,12 +6,12 @@ Data is probably already in flat file format.
 
 Ideas:
 
-1. For their own analysis NM has provided a cleaned up version of the 2017 data certified to have no duplicates. Compare the data in the No duplicates 2017 file to the standard export.  What are the differences?
+1. For their own analysis NM has provided a cleaned up version of the 2017 data certified to have no duplicates. Compare the data in the No duplicates 2017 file to the standard export.  What are the differences? 
 
 2. Remove any duplicates from the 2016 data 
     Find events in the same within the same place and time, and review manually. 
     
-3. Append 2017 and 2016 data to ensure a dataset with now duplicates.
+3. Append 2017 and 2016 data to ensure a dataset with no duplicates.
 
 4. The UNRCO has provided a new system of place codes, which converts the old system of HLCIT codes used to identify political boundaries down to the ward level into the new official Federal state set up. Map the clean dataframes to the new federal structrues. (also do this for the population by ward data and update it on HDX)
 
@@ -30,7 +30,9 @@ Data import:
     write function to verify the dates are the same where the incident numbers are the same. 
    
    Find the diff between the data frames to see what was dropped and what was added. 
-   
+     
+   Created a function to try and flag duplicates by location. Only found one genuine duplicate, description was the same. Steps 1 and 2 in plan are apparenly more data engineering than data science. Maybe return to after step 4.  
+ 
  Notes: 
   
   Empty rows? 
