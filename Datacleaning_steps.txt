@@ -2,9 +2,9 @@
 Steps to clean data in Nepal Monitor data set: 
 
 
-Data is probably already in flat file format. 
+Data is already in flat file format. 
 
-Ideas:
+Plan:
 
 1. For their own analysis NM has provided a cleaned up version of the 2017 data certified to have no duplicates. Compare the data in the No duplicates 2017 file to the standard export.  What are the differences? 
 
@@ -13,30 +13,33 @@ Ideas:
     
 3. Append 2017 and 2016 data to ensure a dataset with no duplicates.
 
-4. The UNRCO has provided a new system of place codes, which converts the old system of HLCIT codes used to identify political boundaries down to the ward level into the new official Federal state set up. Map the clean dataframes to the new federal structrues. (also do this for the population by ward data and update it on HDX)
+4. The UNRCO has provided a new system of place codes, which converts the old system of HLCIT codes used to identify political boundaries down to the ward level into the new official Federal boundaries. Map the clean data frames to the new federal structures. (also do this for the population by ward data and update it on HDX)
 
 
 Actual steps: 
 
-Data import:  
-   Remove Errant comma from line 6055 of 1519759656_39328483.csv and save new file with cohrent file name - NM2016_17export.csv
-   Attempt reinport
+1. Data import:  
+   Remove Errant comma from line 6055 of 1519759656_39328483.csv and save new file with coherent file name - NM2016_17export.csv
+   Attempt re-inport
    Check in new files
    
-   Eyeball the difference in both. it's clear by the row numbers there are significant differences. Looks like the dates are different too. Let's convert them into a date series object. Needed to find fuction for converting dates from xlsx format.
-
-    Remove normalize times so we are only working with dates
-    Reindex dfs by incident number and sort by index
-    write function to verify the dates are the same where the incident numbers are the same. 
+  
+2. Remove normalize times so we are only working with dates
+   Re index dfs by incident number and sort by index
+   write function to verify the dates are the same where the incident numbers are the same. 
    
-   Find the diff between the data frames to see what was dropped and what was added. 
+3. Created function to find the diff between the data frames to see what was dropped and what was added. 
      
-   Created a function to try and flag duplicates by location. Only found one genuine duplicate, description was the same. Steps 1 and 2 in plan are apparenly more data engineering than data science. Maybe return to after step 4.  
+4. Created a function to try and flag duplicates by location. Only found one genuine duplicate, description was the same. Steps 1 and 2 in plan are apparently more data engineering than data science.  
  
- Notes: 
-  
-  Empty rows? 
-  Columns? 
-  
-  If you do ones's and 0....  Don't worry about converting columns. 
-  Begin to run different functions in python, identify blanks / outliers, use code to prove that there are or are not problems. 
+5. Went back to basic data cleaning steps:
+    
+    Remove unnecessary columns
+
+    Convert yes no values to 1's and zeros
+
+    Unpack numerical codes into columns
+
+  Found that numerical codes were to numerous to break out into own columns,
+ 
+6. Created function to map new federal structure data to dataset. Found additional cleaning of Federal structure data necessary, due to untidy ward listing
