@@ -118,13 +118,17 @@ The outlier status of Sarlahi can be seen in province 2, with ~1.1 killed per 10
 The figure above displays the top and 10 correlations with INSEC on a per-incident basis. The most extreme negative correlation between sources is between INSEC and National/Online Media.  This might suggest an underreporting of the types of incidents reported by INSEC (Notably Sexual assault and one sided violence) in the national media. 
 
 ### Question 5: How are types of violence correlated between thematic categories?
-Producing a correlation map of every variable results in too many paired variables to plot effectively. Plotting every 10,000th pair with less than a perfect 1 to 1 pearson correlation (which should only occur when variables are paired against themselves) shows that out of the 132,076 pairs with such a relationship, Roughly 50% of those have a some positive correlation, with the other half having either no correlation or a very slight negative correlation. Slightly more than 1% represented a pearson correlation greater than 0.9, although this still represents 134 pairs. 
+
 ![Pearson Correlation - every 10,000th paired variable](/images/short_corr.png)
+
+Producing a correlation map of every variable results in too many paired variables to plot effectively. Plotting every 10,000th pair with less than a perfect 1 to 1 pearson correlation (which should only occur when variables are paired against themselves) shows that out of the 132,076 pairs with such a relationship, Roughly 50% of those have a some positive correlation, with the other half having either no correlation or a very slight negative correlation. Slightly more than 1% represented a pearson correlation greater than 0.9, although this still represents 134 pairs. 
+
 
 
 ### Question 6: How do types of violence correlate with census demographics?
 ![Top and bottom 10 correlation with POPULATION](/images/pop_corr.png)
 ![Top and bottom 10 correlation with DENSITY](/images/density_coor.png)
+
 Several of the variables least and most correlated with population are also least and most correlated with population density.  These (highlighted above) include household numbers, National/Online Media as a source, Violence targeted at criminals, and a negative correlation with high elevation.  Other variables change their ranking significantly between the two.  Dalit (untouchable) related issues, sexual assaults and suicides are in the 10 most negatively correlated with population density, where this is not the case with Population, likely indicating that such issues may be more likely to occur in rural areas. 
 
 
