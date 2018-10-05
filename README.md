@@ -60,47 +60,52 @@ It is immediately apparent that, while there is no obvious correlation between e
 ### Question 2: how are impacts of violence correlated with population and each other?
 
 
+![linear regression](/images/replot_all.png)
+
 Simply dividing the sum of the Total Killed by the sum of the population per district (divided by 100,000) yields a homicide rate of about 1.68 per 100,000 people.  A linear regression, produces a slope of 1.59 Total Killed per 100,000 people + 0.33
-  
+
+![joint plot - Killed](/images/joint_plot_killed.png)
+![joint plot - Injured](/images/joint_plot_injured.png)
 
 From the joint plots above, there is an obvious relationship between district population and various impact numbers. For the Total Killed by population chart, for instance, a "pearsonr = 0.86" shows there is a essentially an 86% linear correlation between Population and 'Total Killed.' In the same graph, "p=1.1e-22" means there is a vanishingly small (1.1 * 10 to the negative 22nd) chance that the null hypothesis (that the relationship is a result of random chance) is correct.
 
-
+![correlation of impacts](/images/correlation_impacts.png)
 
 A correlation heat map of all impacts shows a slight correlation between nearly all impacts, save for severe building damage. This could be a function of all these impacts being correlated with population. The highest overall correlation with population appears to be "Total Killed."
 
+![correlation of impacts normalized by population](/images/correlation_impacts_normalized.png)
 
 
 Controlling for population by using impact numbers re-mapped per 100,000 population reveals a few interesting hot-spots. Some correlations between impacts are obvious, as they reflect overlapping events. For example, "Female Killed" is a subset of "Total Killed" so both should be correlated with each other. The same applies for "Total injured" v. "Female Injured," "Total no. Rape or Attempted Rape" v. female and youth rape, etc. Total killed numbers still show slight correlations with most other impacts, even when controlling for population, including injuries, rapes, abductions, and building damage. This may be a result of multiple impacts resulting from the same major events, but perhaps also shows there are some commonalities beyond population numbers which might predict where violence takes place. Incorporating other demographic information could be informative.
 
 Other interesting correlations in the population normalized heat map:
-Total/Female Injured and Total Buildings damaged (pearsonr = 0.51).
-Total Buildings and Total Vehicles (pearsonr = 0.47)
-Population and abductions (pearsonr = 0.17 - 0.28 despite normalization)
-Negative correlation between population and injuries per capita (pearsonr = -0.22)
-Higher correlation between Total Injured and Youth - below 25 - Killed (0.66) than Female Killed and Total Killed (0.45)
+* Total/Female Injured and Total Buildings damaged (pearsonr = 0.51).
+* Total Buildings and Total Vehicles (pearsonr = 0.47)
+* Population and abductions (pearsonr = 0.17 - 0.28 despite normalization)
+* Negative correlation between population and injuries per capita (pearsonr = -0.22)
+* Higher correlation between Total Injured and Youth - below 25 - Killed (0.66) than Female Killed and Total Killed (0.45)
 
-
-
+![Histogram - Killed](/images/hist_killed.png)
+![Histogram - Injured](/images/hist_injured.png)
 
 The histograms in the left show the raw distribution of 'Total Killed' and 'Total Injured, with their similar skew to the right, indicating more districts have lower impact numbers and fewer districts have higher impact numbers.
 
 The histograms on the right show the same impacts per 100,000 population. While dividing the 'Total Killed' by population creates a more normal (bell shaped) distribution, doing the same to 'Total Injured,' barely changes the shape of the distribution at all. A theoretical normal distribution has been overlaid the Total Killed per 100,000 histogram to show the similarity. Additionally a Shapiro-Wilk test with a p-value of 0.19 means the distribution is probably normal or - more accurately - is not rejected as a normal distribution. 
 
 
-
-
 ### Question 3: How does the distribution of violence differ between provinces?
+[Pair Plot](/images/pairplot_province.png)
 Shading a pair plot of Total Killed v. Population per district according to province, produces a histogram of population per district and Total Killed by district, while combining both together in scatter plots. It is immediately apparent that both the histograms look very much like each other. The most common number of people per district is around 250,000 while the most common Total Killed is somewhere between 2.5 and 5, with the distribution rapidly falling off in both graphs as numbers rise.
 
 Kathmandu district can be seen standing apart in all graphs with a population of slightly under 1,750,000 and approximately 26 Total Killed, colored to match province 3. Province 2 also stands out, in that it doesn't have any districts with a population below 500,000, and is thus responsible for a "bulge" in the middle of both histograms.
 
 Of course, the most obvious way in which Province 2 stands out is with its regression line. All other provinces more or less display a regression line correlating Total Killed with Population, while Province 2, displays a prominently different trend. Why is this?
 
-
-
+![Regression - Nepal v. Province 2](/regplot_prov_2.png)
 
 By plotting Total Killed v. Population regression line for Nepal and separating out province 2, We can see the reason for Province 2 bucking the trend is two fold: Sarlahi has far fewer violent deaths per-capita than the linear regression line for all provinces(1.59 +0.33 deaths per 100,000 people), while Parsa, Saptari, Siraha, and Rautahat have considerably more. These are different enough from each other to result in a regression line of (-2.12 +28.3 deaths per 100,000 people) for province 2.
+
+![Distribution of violent deaths](/dist_violent_deaths.png)
 
 The the box plot above visualizes the distribution of violent deaths per 100,000 people over Nepal's federal provinces. Each dot in the overlaid swarm plot represents a district, with it's vertical position indicating the 'Total Killed' per 100,000 pop. in that district. Each province is plotted separately, by the province number, with the leading and trailing districts for each labeled.
 
