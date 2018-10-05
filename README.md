@@ -52,6 +52,7 @@ Initial analysis focused on identifying obvious correlations and trends with sim
 
 ### Question 1: Are the impacts of violence in the data correlated with specific time periods?
 In 2017, Nepal experienced 3 rounds of elections for new local bodies (created by combining different wards together), and 1 combined round of elections for the House of Representatives and officials at the provincial level. The decision making process for the creation of all these units was highly contested, and resulted in multiple rounds of strikes and protests, beginning with the registration process. These time periods can be highlighted while plotting impacts in a time series to find if there are any notable correlations
+![2017 Impacts of Violence by Week](/images/time_series.png)
 
 It is immediately apparent that, while there is no obvious correlation between election rounds and the total number of people killed or raped per week, there is a striking relationship between the total number of injured and the timing of the elections. Interestingly, the spikes in the total number of injured are not reflected in the number of 'Female Injured.' This can either be attributed to an exclusively male participation in election related contestation, or an inability to differentiate gender among injured in media reports. Reports of physical damage to buildings and vehicles similarly match the timing of election rounds
 
@@ -115,7 +116,7 @@ Producing a correlation map of every variable results in too many paired variabl
 ### Question 6: How do types of violence correlate with census demographics?
 Several of the variables least and most correlated with population are also least and most correlated with population density.  These (highlighted above) include household numbers, National/Online Media as a source, Violence targeted at criminals, and a negative correlation with high elevation.  Other variables change their ranking significantly between the two.  Dalit (untouchable) related issues, sexual assaults and suicides are in the 10 most negatively correlated with population density, where this is not the case with Population, likely indicating that such issues may be more likely to occur in rural areas. 
 
-## Initial Conclusions:
+## Initial Findings Summary:
 
 ### 1. Certain impacts of violence are correlated with elections. 
 Specifically, injuries and physical damage appear correlated with electoral rounds, while other impacts have no obvious correlation with these periods.
