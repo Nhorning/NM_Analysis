@@ -118,11 +118,17 @@ The outlier status of Sarlahi can be seen in province 2, with ~1.1 killed per 10
 The figure above displays the top and 10 correlations with INSEC on a per-incident basis. The most extreme negative correlation between sources is between INSEC and National/Online Media.  This might suggest an underreporting of the types of incidents reported by INSEC (Notably Sexual assault and one sided violence) in the national media. 
 
 ### Question 5: How are types of violence correlated between thematic categories?
+![All Paired Variables](/images/huge_corr.png)
+Producing a correlation heat map of every variable sorted by VDC results in too many paired variables see effectively (zoom in to read labels). However, sorting the map by correlation to population displays some interesting patterns.
+* Variables with a high correlation with population tend to be more correlated with each other, though not universally so
+* There is a 'stripe' of very highly correlated variables near the top/left, including "Crosscutting issues_Earthquake" which seem to correlate with nearly all other variables to the same degree. The effects of the earthquake were localized, so perhaps all of these issues are are in earthquake effected VDCs. 
+* Some 'stripes' of this nature include relationships that are unexpected - Organizations based on economic demands, Women's Rights Activists, and Hindu, appear correlated to other variables at nearly the same rate.
+* While there appears to be potential for several areas of exploration, the information appears too overwhelming for effective analysis.
+
 
 ![Pearson Correlation - every 10,000th paired variable](/images/short_corr.png)
 
-Producing a correlation map of every variable results in too many paired variables to plot effectively. Plotting every 10,000th pair with less than a perfect 1 to 1 pearson correlation (which should only occur when variables are paired against themselves) shows that out of the 132,076 pairs with such a relationship, Roughly 50% of those have a some positive correlation, with the other half having either no correlation or a very slight negative correlation. Slightly more than 1% represented a pearson correlation greater than 0.9, although this still represents 134 pairs. 
-
+Plotting every 10,000th pair with less than a perfect 1 to 1 pearson correlation (which should only occur when variables are paired against themselves) shows that out of the 132,076 pairs with such a relationship, Roughly 50% of those have a some positive correlation, with the other half having either no correlation or a very slight negative correlation. Slightly more than 1% represented a pearson correlation greater than 0.9, although this still represents 134 pairs. 
 
 
 ### Question 6: How do types of violence correlate with census demographics?
