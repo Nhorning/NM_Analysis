@@ -94,18 +94,18 @@ The histograms on the right show the same impacts per 100,000 population. While 
 
 
 ### Question 3: How does the distribution of violence differ between provinces?
-[Pair Plot](/images/pairplot_province.png)
+![Pair Plot](/images/pairplot_province.png)
 Shading a pair plot of Total Killed v. Population per district according to province, produces a histogram of population per district and Total Killed by district, while combining both together in scatter plots. It is immediately apparent that both the histograms look very much like each other. The most common number of people per district is around 250,000 while the most common Total Killed is somewhere between 2.5 and 5, with the distribution rapidly falling off in both graphs as numbers rise.
 
 Kathmandu district can be seen standing apart in all graphs with a population of slightly under 1,750,000 and approximately 26 Total Killed, colored to match province 3. Province 2 also stands out, in that it doesn't have any districts with a population below 500,000, and is thus responsible for a "bulge" in the middle of both histograms.
 
 Of course, the most obvious way in which Province 2 stands out is with its regression line. All other provinces more or less display a regression line correlating Total Killed with Population, while Province 2, displays a prominently different trend. Why is this?
 
-![Regression - Nepal v. Province 2](/regplot_prov_2.png)
+![Regression - Nepal v. Province 2](/images/regplot_prov_2.png)
 
 By plotting Total Killed v. Population regression line for Nepal and separating out province 2, We can see the reason for Province 2 bucking the trend is two fold: Sarlahi has far fewer violent deaths per-capita than the linear regression line for all provinces(1.59 +0.33 deaths per 100,000 people), while Parsa, Saptari, Siraha, and Rautahat have considerably more. These are different enough from each other to result in a regression line of (-2.12 +28.3 deaths per 100,000 people) for province 2.
 
-![Distribution of violent deaths](/dist_violent_deaths.png)
+![Distribution of violent deaths](/images/dist_violent_deaths.png)
 
 The the box plot above visualizes the distribution of violent deaths per 100,000 people over Nepal's federal provinces. Each dot in the overlaid swarm plot represents a district, with it's vertical position indicating the 'Total Killed' per 100,000 pop. in that district. Each province is plotted separately, by the province number, with the leading and trailing districts for each labeled.
 
