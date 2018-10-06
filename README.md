@@ -112,7 +112,7 @@ The the box plot above visualizes the distribution of violent deaths per 100,000
 The outlier status of Sarlahi can be seen in province 2, with ~1.1 killed per 100,000 people, while the rest of the Province is bunched up between 2 and 3 killed per 100,000, with a median of ~2.1 per 100,000. Note that despite the wide distribution between 0 and 4 Killed per 100,000, the boxes are mostly centered along the 1.59 deaths per 100,000 line from the previous regression plot, with the medians between 1 and 2.1 deaths per 100,000 people.
 
 
-### Question 4: Is there significant bias in coverage?
+### Question 4: Is bias in media coverage measurable?
 
 ![Top and bottom 10 correlation with INSEC](/images/INSEC_corr.png)
 
