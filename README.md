@@ -115,6 +115,7 @@ The outlier status of Sarlahi can be seen in province 2, with ~1.1 killed per 10
 ### Question 4: Is there significant bias in coverage?
 
 ![Top and bottom 10 correlation with INSEC](/images/INSEC_corr.png)
+
 The figure above displays the top and 10 correlations with INSEC on a per-incident basis. The most extreme negative correlation between sources is between INSEC and National/Online Media.  This might suggest an underreporting of the types of incidents reported by INSEC (Notably Sexual assault and one sided violence) in the national media. 
 
 
