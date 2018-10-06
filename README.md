@@ -9,7 +9,7 @@ Analysis till date has focused on describing what is happening and various trend
 
 The “business problem” is in filling this gap in analysis in order to increase relevance to decision makers in Nepal. It is essentially in moving from “what” is happening to “why “ it might be happening, or answering  “What variables best predict what type of violence happens when?”  Additionally, the project would like to know how media sources overlap in their coverage and whether there is any significant bias. 
 
-NMP has committed to using parts of this analysis in one or more of their publications (it has already utilized one of the resulting graphics in their [2017 annual review](https://www.nepalmonitor.org/blog/2018/07/27/the-nepal-peace-monitor-annual-review-2017/), and to distributing some of the broader implications as a post on their analysis blog. The project has no shortage of GIS/Mapping capacity, so map based visualizations will not be utilised.
+NMP has committed to using parts of this analysis in one or more of their publications (it has already utilized one of the resulting graphics in their [2017 annual review](https://www.nepalmonitor.org/blog/2018/07/27/the-nepal-peace-monitor-annual-review-2017/)), and to distributing some of the broader implications as a post on their analysis blog. The project has no shortage of GIS/Mapping capacity, so map based visualizations will not be utilised.
 
 
 ## Datasets
@@ -175,7 +175,7 @@ Several of the variables least and most correlated with population are also leas
 <details>
   
 ![All Paired Variables](/images/huge_corr.png)
-Producing a correlation heat map of every variable sorted by VDC results in too many paired variables see effectively (zoom in to read labels). However, sorting the map by correlation to population displays some interesting patterns.
+Producing a correlation heat map of every variable sorted by VDC results in too many paired variables see effectively (right click > view image to zoom in and read labels). However, sorting the map by correlation to population displays some interesting patterns.
 * Variables with a high correlation with population tend to be more correlated with each other, though not universally so
 * There is a 'stripe' of very highly correlated variables near the top/left, including "Crosscutting issues_Earthquake" which seem to correlate with nearly all other variables to the same degree. The effects of the earthquake were localized, so perhaps all of these issues are are in earthquake effected VDCs. 
 * Some 'stripes' of this nature include relationships that are unexpected - Organizations based on economic demands, Women's Rights Activists, and Hindu, appear correlated to other variables at nearly the same rate.
