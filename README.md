@@ -47,6 +47,13 @@ In 2017 Nepal created new federal structures, agreed upon in it’s peace proces
 | 4 | Ward | ? |
 
 
+
+### Potential Data Sets
+
+Other useful Nepal data sets are available on [Humanitarian Data Exchange](https://data.humdata.org/search?q=nepal), the [code4Nepal github repo](https://data.humdata.org/search?q=nepal), and [Open Nepal](http://opennepal.net/).
+
+
+
 </details>
 
 ## Data cleaning
@@ -80,8 +87,6 @@ see [Datacleaning_steps.txt](/Datacleaning_steps.txt) and [Data Cleaning](/Data/
 * Created dummy columns for nearly variables tracked by the NMP project.  This made the dataset 375 columns wide. 
 * Created a separate dataframe of source type dummy columns for 35 different types of media sources.
 
-### Potential Data Sets
-Other useful Nepal data sets are available on HDX, the code4Nepal github repo, the UN Nepal Information Platform and Open Nepal.
 </details>
 
 ## Initial Findings
