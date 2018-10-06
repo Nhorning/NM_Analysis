@@ -65,6 +65,7 @@ It is immediately apparent that, while there is no obvious correlation between e
 
 ### Question 2: how are impacts of violence correlated with population and each other?
 <details>
+  
 ![linear regression](/images/replot_all.png)
 
 Simply dividing the sum of the Total Killed by the sum of the population per district (divided by 100,000) yields a homicide rate of about 1.68 per 100,000 people.  A linear regression, produces a slope of 1.59 Total Killed per 100,000 people + 0.33
@@ -98,7 +99,9 @@ The histograms in the left show the raw distribution of 'Total Killed' and 'Tota
 The histograms on the right show the same impacts per 100,000 population. While dividing the 'Total Killed' by population creates a more normal (bell shaped) distribution, doing the same to 'Total Injured,' barely changes the shape of the distribution at all. A theoretical normal distribution has been overlaid the Total Killed per 100,000 histogram to show the similarity. Additionally a Shapiro-Wilk test with a p-value of 0.19 means the distribution is probably normal or - more accurately - is not rejected as a normal distribution. 
 </details>
 
-### Question 3: How does the distribution of violence differ between provinces?<details><summary></summary>
+### Question 3: How does the distribution of violence differ between provinces?
+<details>
+  
 ![Pair Plot](/images/pairplot_province.png)
 Shading a pair plot of Total Killed v. Population per district according to province, produces a histogram of population per district and Total Killed by district, while combining both together in scatter plots. It is immediately apparent that both the histograms look very much like each other. The most common number of people per district is around 250,000 while the most common Total Killed is somewhere between 2.5 and 5, with the distribution rapidly falling off in both graphs as numbers rise.
 
@@ -125,7 +128,9 @@ The outlier status of Sarlahi can be seen in province 2, with ~1.1 killed per 10
 The figure above displays the top and 10 correlations with INSEC on a per-incident basis. The most extreme negative correlation between sources is between INSEC and National/Online Media.  This might suggest an underreporting of the types of incidents reported by INSEC (Notably Sexual assault and one sided violence) in the national media. 
 </details>
 
-### Question 5: How do types of violence correlate with census demographics?<details><summary></summary>
+### Question 5: How do types of violence correlate with census demographics?
+<details>
+
 ![Top and bottom 10 correlation with POPULATION](/images/pop_corr.png)
 ![Top and bottom 10 correlation with DENSITY](/images/density_coor.png)
 
@@ -134,13 +139,13 @@ Several of the variables least and most correlated with population are also leas
 
 ### Question 6: How are types of violence correlated between thematic categories?
 <details>
+  
 ![All Paired Variables](/images/huge_corr.png)
 Producing a correlation heat map of every variable sorted by VDC results in too many paired variables see effectively (zoom in to read labels). However, sorting the map by correlation to population displays some interesting patterns.
 * Variables with a high correlation with population tend to be more correlated with each other, though not universally so
 * There is a 'stripe' of very highly correlated variables near the top/left, including "Crosscutting issues_Earthquake" which seem to correlate with nearly all other variables to the same degree. The effects of the earthquake were localized, so perhaps all of these issues are are in earthquake effected VDCs. 
 * Some 'stripes' of this nature include relationships that are unexpected - Organizations based on economic demands, Women's Rights Activists, and Hindu, appear correlated to other variables at nearly the same rate.
 * While there appears to be potential for several areas of exploration, the information appears too overwhelming for effective analysis.
-
 
 ![Pearson Correlation - every 10,000th paired variable](/images/short_corr.png)
 
