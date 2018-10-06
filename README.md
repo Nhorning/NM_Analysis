@@ -169,6 +169,6 @@ This suggests it is more likely for local media to report a given human rights i
 ### 5. Clear differences in correlations appear between types of violence and total population compared to correlations with population density. 
 This indicates that there may be an urban rural divide between certain types of violence or contestation, and that other relationships may be identified when further demographic information is combined with the dataset.  
 ### 6. Variable correlations are numberous and overwhelming 
-This is likely due to their correlation with population among other factors, and increases the difficulty of identifying which are the most important relationships without additional assistance and may highlight the possible need for machine learning in further analysis
+A high correlation with population seems to increase the likelihood that a given variable pair will correlate but is certainly not the only factor. This increases the difficulty of identifying which are the most important relationships without additional assistance and may highlight the utiltiy of machine learning in further analysis
 
 
