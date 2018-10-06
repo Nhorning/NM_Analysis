@@ -194,7 +194,7 @@ Province 2 has the highest Total Killed among all the provinces and the highest 
 This suggests it is more likely for local media to report a given human rights incident than National/Media.  Further investigations could explore statistical significance, as well as which variables predict whether a given report will be published by what type of source. 
 ### 5. Clear differences in correlations appear between types of violence and total population compared to correlations with population density. 
 This indicates that there may be an urban rural divide between certain types of violence or contestation, and that other relationships may be identified when further demographic information is combined with the dataset.  
-### 6. Variable correlations are numberous and overwhelming 
-A high correlation with population seems to increase the likelihood that a given variable pair will correlate but is certainly not the only factor. This increases the difficulty of identifying which are the most important relationships without additional assistance and may highlight the utiltiy of machine learning in further analysis
+### 6. Hundreds of variables correlate nearly perfectly with each other
+A high correlation with population increases the likelihood that a given variable pair will also have a high correlation but is certainly not the only factor. The overwhelming numbers increase the difficulty of identifying which are the most important relationships without additional assistance and may highlight the utiltiy of machine learning in further analysis
 
 
