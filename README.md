@@ -117,7 +117,14 @@ The outlier status of Sarlahi can be seen in province 2, with ~1.1 killed per 10
 ![Top and bottom 10 correlation with INSEC](/images/INSEC_corr.png)
 The figure above displays the top and 10 correlations with INSEC on a per-incident basis. The most extreme negative correlation between sources is between INSEC and National/Online Media.  This might suggest an underreporting of the types of incidents reported by INSEC (Notably Sexual assault and one sided violence) in the national media. 
 
-### Question 5: How are types of violence correlated between thematic categories?
+
+### Question 5: How do types of violence correlate with census demographics?
+![Top and bottom 10 correlation with POPULATION](/images/pop_corr.png)
+![Top and bottom 10 correlation with DENSITY](/images/density_coor.png)
+
+Several of the variables least and most correlated with population are also least and most correlated with population density.  These (highlighted above) include household numbers, National/Online Media as a source, Violence targeted at criminals, and a negative correlation with high elevation.  Other variables change their ranking significantly between the two.  Dalit (untouchable) related issues, sexual assaults and suicides are in the 10 most negatively correlated with population density, where this is not the case with Population, likely indicating that such issues may be more likely to occur in rural areas. 
+
+### Question 6: How are types of violence correlated between thematic categories?
 ![All Paired Variables](/images/huge_corr.png)
 Producing a correlation heat map of every variable sorted by VDC results in too many paired variables see effectively (zoom in to read labels). However, sorting the map by correlation to population displays some interesting patterns.
 * Variables with a high correlation with population tend to be more correlated with each other, though not universally so
@@ -131,12 +138,6 @@ Producing a correlation heat map of every variable sorted by VDC results in too 
 Plotting every 10,000th pair with less than a perfect 1 to 1 pearson correlation (which should only occur when variables are paired against themselves) shows that out of the 132,076 pairs with such a relationship, Roughly 50% of those have a some positive correlation, with the other half having either no correlation or a very slight negative correlation. Slightly more than 1% represented a pearson correlation greater than 0.9, although this still represents 134 pairs. 
 
 
-### Question 6: How do types of violence correlate with census demographics?
-![Top and bottom 10 correlation with POPULATION](/images/pop_corr.png)
-![Top and bottom 10 correlation with DENSITY](/images/density_coor.png)
-
-Several of the variables least and most correlated with population are also least and most correlated with population density.  These (highlighted above) include household numbers, National/Online Media as a source, Violence targeted at criminals, and a negative correlation with high elevation.  Other variables change their ranking significantly between the two.  Dalit (untouchable) related issues, sexual assaults and suicides are in the 10 most negatively correlated with population density, where this is not the case with Population, likely indicating that such issues may be more likely to occur in rural areas. 
-
 
 ## Initial Findings Summary:
 
@@ -148,8 +149,9 @@ Specifically, injuries and physical damage appear correlated with electoral roun
 Province 2 has the highest Total Killed among all the provinces and the highest population.  It also has the tightest distribution of Total Killed per 100,000 people.  And a negative regression line of violence per-capita.  These differences might warrant further exploration when additional demographics are added to the dataset. 
 ### 4. National/Online Media has the most negative correlation with reports of Human Rights violations (from INSEC).  
 This suggests it is more likely for local media to report a given human rights incident than National/Media.  Further investigations could explore statistical significance, as well as which variables predict whether a given report will be published by what type of source. 
-### 5. Hundreds of variable pairs have a nearly 1 to 1 correlation with each other 
-This is likely due to their correlation with population among other factors. This increases the difficulty of identifying which are the most important relationships without additional assistance and may highlight the possible need for machine learning in further analysis
-### 7. Clear differences in correlations appear between types of violence and total population compared to correlations with population density. 
+### 5. Clear differences in correlations appear between types of violence and total population compared to correlations with population density. 
 This indicates that there may be an urban rural divide between certain types of violence or contestation, and that other relationships may be identified when further demographic information is combined with the dataset.  
+### 6. Variable correlations are numberous and overwhelming 
+This is likely due to their correlation with population among other factors, and increases the difficulty of identifying which are the most important relationships without additional assistance and may highlight the possible need for machine learning in further analysis
+
 
