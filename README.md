@@ -185,17 +185,15 @@ Several of the variables least and most correlated with population are also leas
 
 ### Question 6: How are types of violence correlated between thematic categories?
 <details>
-  
-![All Paired Variables](/images/huge_corr.png)
-Producing a correlation heat map of every variable sorted by VDC results in too many paired variables see effectively (right click > view image to zoom in and read labels). However, sorting the map by correlation to population displays some interesting patterns.
-* Variables with a high correlation with population tend to be more correlated with each other, though not universally so
-* There is a 'stripe' of very highly correlated variables near the top/left, including "Crosscutting issues_Earthquake" which seem to correlate with nearly all other variables to the same degree. The effects of the earthquake were localized, so perhaps all of these issues are are in earthquake effected VDCs. 
-* Some 'stripes' of this nature include relationships that are unexpected - Organizations based on economic demands, Women's Rights Activists, and Hindu, appear correlated to other variables at nearly the same rate.
-* While there appears to be potential for several areas of exploration, the information appears too overwhelming for effective analysis.
 
 ![Pearson Correlation - every 10,000th paired variable](/images/short_corr.png)
 
-Plotting every 10,000th pair with less than a perfect 1 to 1 pearson correlation (which should only occur when variables are paired against themselves) shows that out of the 132,076 pairs with such a relationship, Roughly 50% of those have a some positive correlation, with the other half having either no correlation or a very slight negative correlation. Slightly more than 1% represented a pearson correlation greater than 0.9, although this still represents 134 pairs. 
+Plotting every 10,000th pair with less than a perfect 1 to 1 pearson correlation (which should only occur when variables are paired against themselves) shows that out of the 132,076 pairs with such a relationship, Roughly 50% of those have a some positive correlation, with the other half having either no correlation or a very slight negative correlation.
+
+![Paired Correlation Histogram](/images/hist_corr.png)
+
+A histogram of this correlation highlights that the most common r value for paired variables is 0, and that slightly more than 1% represented a Pearson correlation greater than 0.9. However, this 1% still represents 134 pairs of variables, which is still an overwhelming amount for meaningful analysis.
+
 </details>
 
 ## Initial Findings Summary:
@@ -210,7 +208,7 @@ Province 2 has the highest Total Killed among all the provinces and the highest 
 This suggests it is more likely for local media to report a given human rights incident than National/Media.  Further investigations could explore statistical significance, as well as which variables predict whether a given report will be published by what type of source. 
 ### 5. Clear differences in correlations appear between types of violence and total population compared to correlations with population density. 
 This indicates that there may be an urban rural divide between certain types of violence or contestation, and that other relationships may be identified when further demographic information is combined with the dataset.  
-### 6. Hundreds of variables correlate nearly perfectly with each other
-A high correlation with population increases the likelihood that a given variable pair will also have a high correlation but is certainly not the only factor. The overwhelming numbers increase the difficulty of identifying which are the most important relationships without additional assistance and may highlight the utiltiy of machine learning in further analysis
+### 6. Over 100 pairs of variables correlate nearly perfectly with each other
+A high correlation with population increases the likelihood that a given variable pair will also have a high correlation but is certainly not the only factor. The overwhelming numbers increase the difficulty of identifying which are the most important relationships without additional assistance, and may highlight the utiltiy of machine learning in further analysis
 
 
