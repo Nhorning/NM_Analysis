@@ -16,7 +16,7 @@ NMP has committed to using parts of this analysis in one or more of their public
 <details>
 
 ### Nepal Monitor export
-The Nepal Monitor Data set is open data, and freely available on the [reports page](https://www.nepalmonitor.org/reports/) of its website [NM_2016_17export.csv](/Data/NM_2016_17export.csv).  It is geocoded by gps and local level boundaries.  The source of each incident is tracked, and violent incidents are further categorised by heigherachical category codes according to [criteria](https://www.nepalmonitor.org/blog/wp-content/uploads/2017/04/NEPAL-CODING-GUIDELINES_FINAL_MAR2017.pdf) developed together with The Asia Foundation. The broad categories for these variables are Location, Event Forms, Weapons, Causes, Cross Cutting Issues, Actors, Impacts. 
+The Nepal Monitor Data set is open data, and freely available on the [reports page](https://www.nepalmonitor.org/reports/) of its website [NM_2016_17export.csv](/Data/NM_2016_17export.csv).  It is geocoded by gps and local level boundaries.  The source of each incident is tracked, and violent incidents are further categorised by heigherachical category codes according to [criteria](https://www.nepalmonitor.org/blog/wp-content/uploads/2017/04/NEPAL-CODING-GUIDELINES_FINAL_MAR2017.pdf) developed together with The Asia Foundation. The broad categories for these variables are Location, Event Forms, Weapons, Causes, Cross Cutting Issues, Actors, and impacts. 
 
 ### No Duplicate File
 While the full dataset dates back to 2012, the Peace Monitoring Project only started applying this methodology in mid 2016. NMP produced a dataset for their 2017 annual review in which duplicate incidents (multiple reports referring to the same incident in the field) had been meticulously removed through a manual process. [2017 PMP Data Final No Duplicates.xlsx](/Data/2017%20PMP%20Data%20Final%20No%20Duplicates.xlsx) is similar to the export, but in excel format with the duplicates removed. 
@@ -37,22 +37,29 @@ The “ward” is the lowest level administrative boundary in Nepal of which the
 ‘[npl_polbanda_adm5_wad_25k_50k_sdn_wgs84.csv](/Data/npl_polbanda_adm5_wad_25k_50k_sdn_wgs84.csv)‘ is ward level boundary data exported from an official UN boundary [shapefile](https://en.wikipedia.org/wiki/Shapefile) hosted on HDX  using QGIS to calculate the area of the shapes. 
 
 ### Federal Relational File
-In 2017 Nepal created new federal structures, agreed upon in it’s peace process. A relational file [Federal_VDC_Relation_web_clean.xlsx](/Data/Federal_VDC_Relation_web_clean.xlsx) has been provided by the UNRCO correlating the new structures with the old ones. VDC level boundaries were divided, but ward level were not significantly. Boundary hierarchy:
+In 2017 Nepal created new federal structures, agreed upon in it’s peace process. A relational file [Federal_VDC_Relation_web_clean.xlsx](/Data/Federal_VDC_Relation_web_clean.xlsx) has been provided by the UNRCO correlating the new structures with the old ones. VDC level boundaries were divided, but ward level were not significantly. Agreements on boundaries are controversial and have been subject to change over the last 2 years. Official data is still scarce. 
+Boundary hierarchy:
 
 | Level | Boundary type | Number of units |
 |-----|---------|---------|
 | 1 | Province | 7 |
-| 2 | District | 78 |
-| 3 | Gaupalika | ? |
+| 2 | District | 77 |
+| 3 | Gaupalika | ~767 |
 | 4 | Ward | ? |
 
 
 
 ### Potential Data Sets
 
-Other useful Nepal data sets are available on [Humanitarian Data Exchange](https://data.humdata.org/search?q=nepal), the [code4Nepal github repo](https://data.humdata.org/search?q=nepal), and [Open Nepal](http://opennepal.net/).
-
-
+Datasets that could add additional variables are available on [Humanitarian Data Exchange](https://data.humdata.org/search?q=nepal), the [code4Nepal github repo](https://data.humdata.org/search?q=nepal), and [Open Nepal](http://opennepal.net/).
+Notable examples include:
+* [Complete sensus data](https://github.com/Code4Nepal/census-data) including drinking water, school attendance, disability, education level, literacy status, and toilet type, down to VDC level.
+* [Nepal Health Sites](https://data.humdata.org/dataset/nepal-healthsites)
+* [Nepal District Headquarters](https://data.humdata.org/dataset/nepal-district-headquarters)
+* [Nepal Population Statistics](https://data.humdata.org/dataset/nepal-population-statistics-census-2011)
+* [Nepal Earthquake Severity Index](https://data.humdata.org/dataset/nepal-earthquake-severity-index)
+* [Literate population](https://github.com/Code4Nepal/data/blob/master/datasets/unesco/literacy-rates.csv)
+* [Local Boundaries (unofficial)](http://localboundries.oknp.org/)
 
 </details>
 
