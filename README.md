@@ -5,7 +5,7 @@ The Nepal Monitor Project (NMP) comprehensively maps human rights and violence d
 
 
 ## Problem
-Analysis till date has focused on describing what is happening and various trends in violence, rather than combining with other data to find correlations, that could perhaps be used to make predictions or policy recommendations. Furthermore, while the project is tracking and coding for hundreds of different variables in types of violence and contestation, it has no current method of teasing out unanticipated relationships between them across thematic categories.  Additionally, NMP has been systematically tracking which media sources report which incidents. So far any systematic analysis of media coverage and/or bias has proven illusive.
+Analysis till date has focused on describing what is happening and various trends in violence, rather than combining with other data to find correlations, that could perhaps be used to make predictions or policy recommendations. While the project is tracking and coding for hundreds of different variables in types of violence and contestation, it has no current method of teasing out unanticipated relationships between them across thematic categories.  Additionally, NMP has been systematically tracking which media sources report which incidents. So far any systematic analysis of media coverage and/or bias has proven illusive.
 
 The “business problem” is in filling this gap in analysis in order to increase relevance to decision makers in Nepal. It is essentially in moving from “what” is happening to “why “ it might be happening, or answering  “What variables best predict what type of violence happens when?”  Additionally, the project would like to know how media sources overlap in their coverage and whether there is any significant bias. 
 
@@ -16,7 +16,7 @@ NMP has committed to using parts of this analysis in one or more of their public
 <details>
 
 ### Nepal Monitor export
-The Nepal Monitor Data set is open data, and freely available on the [reports page](https://www.nepalmonitor.org/reports/) of its website [NM_2016_17export.csv](/Data/NM_2016_17export.csv).  It is geocoded by gps and local level boundaries.  The source of each incident is tracked, and violent incidents are further categorised by heigherachical category codes according to [criteria](https://www.nepalmonitor.org/blog/wp-content/uploads/2017/04/NEPAL-CODING-GUIDELINES_FINAL_MAR2017.pdf) developed together with The Asia Foundation. The broad categories for these variables are Location, Event Forms, Weapons, Causes, Cross Cutting Issues, Actors, and impacts. 
+The Nepal Monitor Data set is open data, and freely available on the [reports page](https://www.nepalmonitor.org/reports/) of its website [NM_2016_17export.csv](/Data/NM_2016_17export.csv).  It is geocoded by gps and local level boundaries.  The source of each incident is tracked, and violent incidents are further categorised by heigherachical category codes according to [criteria](https://www.nepalmonitor.org/blog/wp-content/uploads/2017/04/NEPAL-CODING-GUIDELINES_FINAL_MAR2017.pdf) developed together with The Asia Foundation. The broad categories for these variables are Location, Event Forms, Weapons, Causes, Cross Cutting Issues, Actors, and Impacts. 
 
 ### No Duplicate File
 While the full dataset dates back to 2012, the Peace Monitoring Project only started applying this methodology in mid 2016. NMP produced a dataset for their 2017 annual review in which duplicate incidents (multiple reports referring to the same incident in the field) had been meticulously removed through a manual process. [2017 PMP Data Final No Duplicates.xlsx](/Data/2017%20PMP%20Data%20Final%20No%20Duplicates.xlsx) is similar to the export, but in excel format with the duplicates removed. 
@@ -92,12 +92,12 @@ see [Datacleaning_steps.txt](/Datacleaning_steps.txt) and [Data Cleaning](/Data/
 * After analysis of above, created a dataframe of incidents grouped by VDC and joined with VDC level census data
 * Joined the above with ‘AREA’ Data exported from the shapefile export and divided population by area to derive a density column
 * Created dummy columns for nearly variables tracked by the NMP project.  This made the dataset 375 columns wide. 
-* Created a separate dataframe of source type dummy columns for 35 different types of media sources.
+* Created a separate dataframe of source type dummy columns for 35 different types of media sources. 
 
 </details>
 
 ## Initial Findings
-Initial analysis focused on identifying obvious correlations and trends with simple questions, some of which had already been addressed by NMP, and progressively moved on toward more advanced questions in the business problem.
+Initial analysis focused on identifying obvious correlations and trends with more simple questions and progressively moved on toward the more advanced questions in the business problem.
 
 
 ### Question 1: Are the impacts of violence in the data correlated with specific time periods?
@@ -142,7 +142,7 @@ Other interesting correlations in the population normalized heat map:
 
 The histograms in the left show the raw distribution of 'Total Killed' and 'Total Injured, with their similar skew to the right, indicating more districts have lower impact numbers and fewer districts have higher impact numbers.
 
-The histograms on the right show the same impacts per 100,000 population. While dividing the 'Total Killed' by population creates a more normal (bell shaped) distribution, doing the same to 'Total Injured,' barely changes the shape of the distribution at all. A theoretical normal distribution has been overlaid the Total Killed per 100,000 histogram to show the similarity. Additionally a Shapiro-Wilk test with a p-value of 0.19 means the distribution is probably normal or - more accurately - is not rejected as a normal distribution. 
+The histograms on the right show the same impacts per 100,000 population. While dividing the 'Total Killed' by population creates a more normal (bell shaped) distribution, doing the same to 'Total Injured,' barely changes the shape of the distribution at all. A theoretical normal distribution has been overlaid on the Total Killed per 100,000 histogram to show the similarity. Additionally, a Shapiro-Wilk test with a p-value of 0.19 means the distribution is probably normal or - more accurately - is not rejected as a normal distribution. 
 </details>
 
 ### Question 3: How does the distribution of violence differ between provinces?
@@ -205,7 +205,7 @@ Specifically, injuries and physical damage appear correlated with electoral roun
 ### 3. There are significant differences in the distribution of violence between provinces, particularly regarding province 2.
 Province 2 has the highest Total Killed among all the provinces and the highest population.  It also has the tightest distribution of Total Killed per 100,000 people.  And a negative regression line of violence per-capita.  These differences might warrant further exploration when additional demographics are added to the dataset. 
 ### 4. National/Online Media has the most negative correlation with reports of Human Rights violations (from INSEC).  
-This suggests it is more likely for local media to report a given human rights incident than National/Media.  Further investigations could explore statistical significance, as well as which variables predict whether a given report will be published by what type of source. 
+This suggests it is more likely for local media to report a given human rights incident than National/Media.  Further investigations could explore statistical significance, as well as which variables predict whether a given report will be published by what type of source. If more finely grained altitude data can be added to the dataset, correlation of the types of reporting with altitude could explore possible bias in hill v. flatland coverage.
 ### 5. Clear differences in correlations appear between types of violence and total population compared to correlations with population density. 
 This indicates that there may be an urban rural divide between certain types of violence or contestation, and that other relationships may be identified when further demographic information is combined with the dataset.  
 ### 6. Over 100 pairs of variables correlate nearly perfectly with each other
