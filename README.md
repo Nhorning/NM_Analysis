@@ -12,7 +12,7 @@ In order to be an effective "Early Warning System" Nepal Monitor should answer t
 
 2. What variables predict that.
 
-NMP has committed to using parts of this analysis in one or more of their publications (it has already utilized one of the resulting graphics in their [2017 annual review](https://www.nepalmonitor.org/blog/2018/07/27/the-nepal-peace-monitor-annual-review-2017/)), and to distributing some of the broader implications as a post on their analysis blog. The project has no shortage of GIS/Mapping capacity, so map based visualizations will not be utilised.
+NMP has committed to using parts of this analysis in one or more of their publications (it has already utilized one of the resulting graphics in their [2017 annual review](https://www.nepalmonitor.org/blog/2018/07/27/the-nepal-peace-monitor-annual-review-2017/)), and to having the findings presented at it's annual planning meeting in march of 2019.  The project has no shortage of GIS/Mapping capacity, so map based visualizations will not be utilised.
 
 
 ## Datasets
@@ -218,21 +218,56 @@ Baseline scores are calculated by assuming that each variable will have the same
 
 In the run above, MLPRegressor (a neural net), significantly improves the accuracy in forecasts over the baseline in multiple tracked variables. Note how the forecast lags a week behind the first two peaks, but the model seems to have “learned” enough to predict the 3rd one. 
 
+### Best Models
+![top 5 baseline scores](/images/top_baseline.png)
 
-## Findings Summary:
+![top 5 Random Forest Regressor scores](/images/top_rf.png)
 
-### 1. Certain impacts of violence are correlated with elections. 
-Specifically, injuries and physical damage appear correlated with electoral rounds, while other impacts have no obvious correlation with these periods.
-### 2: Impacts of violence are correlated with population
-'Total Killed' is the most highly correlated with population, but all other impacts are at least somewhat correlated with population, and therefore with each other to varying degrees. 'Total Killed' appears to be normally distributed by population, however other impacts of violence do not appear as uniformly distributed according to population.
-### 3. There are significant differences in the distribution of violence between provinces, particularly regarding province 2.
-Province 2 has the highest Total Killed among all the provinces and the highest population.  It also has the tightest distribution of Total Killed per 100,000 people.  And a negative regression line of violence per-capita.  These differences might warrant further exploration when additional demographics are added to the dataset. 
-### 4. National/Online Media has the most negative correlation with reports of Human Rights violations (from INSEC).  
-This suggests it is more likely for local media to report a given human rights incident than National/Media.  Further investigations could explore statistical significance, as well as which variables predict whether a given report will be published by what type of source. If more finely grained altitude data can be added to the dataset, correlation of the types of reporting with altitude could explore possible bias in hill v. flatland coverage.
-### 5. Clear differences in correlations appear between types of violence and total population compared to correlations with population density. 
-This indicates that there may be an urban rural divide between certain types of violence or contestation, and that other relationships may be identified when further demographic information is combined with the dataset.  
-### 6. Over 100 pairs of variables correlate nearly perfectly with each other
-A high correlation with population increases the likelihood that a given variable pair will also have a high correlation but is certainly not the only factor. The overwhelming numbers increase the difficulty of identifying which are the most important relationships without additional assistance, and may highlight the utiltiy of machine learning in further analysis
+![top 5 MLPRegressor scores](/images/top_MLP.png)
+
+![top 5 Lasso scores](/images/Top_lasso.png)
+
+RandomForestRegressor performs the best out of all models attempted by showing significant improvement over control in a diversity of categories (Top 5 shown). MLPRegressor, and Lasso score higher in a narrower set of categories.
+### Feature Engineering
+![Random Forest Regressor feature importance](/images/rf_feature_imp_01.png)
+
+![Random Forest Regressor top features](/images/rf_feature_imp_02.png)
+
+The vast majority of features in the dataset have close to zero impact on predictions. The most important features for prediction can be interpreted by the project as indicators for further analysis, and used for feature pruning to improve efficiency of the models.
+
+## Findings:
+
+### Many of the highest scoring forecasts are for variables that would seem useful for the project to predict. ie:
+* Improvised Explosive Device
+* Collective Violence
+* Total Injured
+
+### The most  important features for predicting multiple variables were associated with electoral periods. ie:
+* Non-violent political protest
+* Collective violence
+* Election related incidents
+
+### It appears certain models can be trained to accurately forecast peaks associated with electoral periods beforehand
+* Further exploration is needed. It currently only works for a small set of variables and it is unclear whether their predictive power will persist. 
+
+## Possible Next Steps
+
+### Improve machine learning models:
+* Add known events (ie: elections), as features into time series data
+* Use classifier to predict simple increase/decrease in next periods violence
+* Break time series analysis into provinces/districts 
+* Add population and demographics as features
+
+### Use insights from predictive modeling in analysis distributed by NMP
+* ie: Explore why Sarlahi experienced less violence
+* Promote most important features as early warning indicators
+* Add forecasts using machine learning to analysis products. (running models again with updated data is relatively easy)
+
+### Add forecasts to Nepal Monitor Platform
+* Display forecast estimates for select variables next to previous accuracy (r²), with 95% confidence interval
+* Significant web development would be needed to automate
+
+
 
 
 
