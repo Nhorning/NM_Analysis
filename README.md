@@ -5,9 +5,12 @@ The Nepal Monitor Project (NMP) comprehensively maps human rights and violence d
 
 
 ## Problem
-Analysis till date has focused on describing what is happening and various trends in violence, rather than combining with other data to find correlations, that could perhaps be used to make predictions or policy recommendations. While the project is tracking and coding for hundreds of different variables in types of violence and contestation, it has no current method of teasing out unanticipated relationships between them across thematic categories.  Additionally, NMP has been systematically tracking which media sources report which incidents. So far any systematic analysis of media coverage and/or bias has proven illusive.
+Analysis till date has focused on describing what is happening and various trends in violence, rather than combining with other data to find correlations, that could perhaps be used to make predictions or policy recommendations. While the project is tracking and coding for hundreds of different variables in types of violence and contestation, predictive analysis based on the data has proven elusive. 
 
-The “business problem” is in filling this gap in analysis in order to increase relevance to decision makers in Nepal. It is essentially in moving from “what” is happening to “why “ it might be happening, or answering  “What variables best predict what type of violence happens when?”  Additionally, the project would like to know how media sources overlap in their coverage and whether there is any significant bias. 
+In order to be an effective "Early Warning System" Nepal Monitor should answer two main questions.
+1. What violence is likely to happen where, and when?
+
+2. What variables predict that.
 
 NMP has committed to using parts of this analysis in one or more of their publications (it has already utilized one of the resulting graphics in their [2017 annual review](https://www.nepalmonitor.org/blog/2018/07/27/the-nepal-peace-monitor-annual-review-2017/)), and to distributing some of the broader implications as a post on their analysis blog. The project has no shortage of GIS/Mapping capacity, so map based visualizations will not be utilised.
 
@@ -96,7 +99,7 @@ see [Datacleaning_steps.txt](/Datacleaning_steps.txt) and [Data Cleaning](/Data/
 
 </details>
 
-## Initial Findings
+## Exploritory Data Analysis
 Initial analysis focused on identifying obvious correlations and trends with more simple questions and progressively moved on toward the more advanced questions in the business problem.
 
 
@@ -196,7 +199,27 @@ A histogram of this correlation highlights that the most common r value for pair
 
 </details>
 
-## Initial Findings Summary:
+## Time Series analysis
+To predict what will happen one week in the future, the model is fed what has happened several weeks prior (X) to a given set of weeks (y) and trains itself to find any relationship. It is then asked to guess what will  happen in the next week (y_pred).
+
+This is done in sequence for every week using multiple variables. 
+### Baseline
+
+![MLPRegressor Baseline](/images/MLP_baseline.png)
+
+![MLPRegressor Baseline Scores](/images/MLP_baseline_scores.png)
+
+Baseline scores are calculated by assuming that each variable will have the same value as the previous week, such as in the example variables above. Note the gridlines show the forecast lagging behind the ground truth by a week.  r² and explained variance measure the degree actual values are predicted by the forecast, with 1 being the highest possible score.   
+
+### Improvement
+![MLPRegressor Improvement](/images/MLP_improvement.png)
+
+![MLPRegressor Scores](/images/MLP_scores.png)
+
+In the run above, MLPRegressor (a neural net), significantly improves the accuracy in forecasts over the baseline in multiple tracked variables. Note how the forecast lags a week behind the first two peaks, but the model seems to have “learned” enough to predict the 3rd one. 
+
+
+## Findings Summary:
 
 ### 1. Certain impacts of violence are correlated with elections. 
 Specifically, injuries and physical damage appear correlated with electoral rounds, while other impacts have no obvious correlation with these periods.
@@ -210,5 +233,7 @@ This suggests it is more likely for local media to report a given human rights i
 This indicates that there may be an urban rural divide between certain types of violence or contestation, and that other relationships may be identified when further demographic information is combined with the dataset.  
 ### 6. Over 100 pairs of variables correlate nearly perfectly with each other
 A high correlation with population increases the likelihood that a given variable pair will also have a high correlation but is certainly not the only factor. The overwhelming numbers increase the difficulty of identifying which are the most important relationships without additional assistance, and may highlight the utiltiy of machine learning in further analysis
+
+
 
 
