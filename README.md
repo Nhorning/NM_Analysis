@@ -260,7 +260,7 @@ The vast majority of features in the dataset have close to zero impact on predic
 * Add population and demographics as features
 
 ### Use insights from predictive modeling in analysis distributed by NMP:
-* ie: Explore why Sarlahi experienced less violence
+* ie: Explore why Sarlahi experienced less violence than the rest of province 2
 * Promote most important features as early warning indicators
 * Add forecasts using machine learning to analysis products. (running models again with updated data is relatively easy)
 
