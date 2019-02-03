@@ -1,4 +1,4 @@
-# Capstone Project 1 - Milestone
+# Capstone Project 1 - Nepal Monitor Predictive Analysis
 
 ## Client
 The Nepal Monitor Project (NMP) comprehensively maps human rights and violence data across Nepal using the vast majority of national news sources. The embedded Peace Monitoring Project sends local sources in from 28 districts to have all incidents of violence systematically mapped, with the goal of improving understanding of violence in Nepal to better respond to it and promote peace.  Analysis from the project is distributed to its subscribers, including local human rights defenders, national monitoring bodies, and the international community on a [regular basis](https://www.nepalmonitor.org/blog/).  
@@ -229,6 +229,7 @@ In the run above, MLPRegressor (a neural net), significantly improves the accura
 
 RandomForestRegressor performs the best out of all models attempted by showing significant improvement over control in a diversity of categories (Top 5 shown). MLPRegressor, and Lasso score higher in a narrower set of categories.
 ### Feature Engineering
+#### With Random Forest Regressor:
 ![Random Forest Regressor feature importance](/images/rf_feature_imp_01.png)
 
 ![Random Forest Regressor top features](/images/rf_feature_imp_02.png)
@@ -258,12 +259,12 @@ The vast majority of features in the dataset have close to zero impact on predic
 * Break time series analysis into provinces/districts 
 * Add population and demographics as features
 
-### Use insights from predictive modeling in analysis distributed by NMP
+### Use insights from predictive modeling in analysis distributed by NMP:
 * ie: Explore why Sarlahi experienced less violence
 * Promote most important features as early warning indicators
 * Add forecasts using machine learning to analysis products. (running models again with updated data is relatively easy)
 
-### Add forecasts to Nepal Monitor Platform
+### Add forecasts to Nepal Monitor Platform:
 * Display forecast estimates for select variables next to previous accuracy (r²), with 95% confidence interval
 * Significant web development would be needed to automate
 
