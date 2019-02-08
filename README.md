@@ -99,7 +99,7 @@ see [Datacleaning_steps.txt](/Datacleaning_steps.txt) and [Data Cleaning](/Data/
 
 </details>
 
-## Exploritory Data Analysis
+## Exploratory Data Analysis
 Initial analysis focused on identifying obvious correlations and trends with more simple questions and progressively moved on toward the more advanced questions in the business problem.
 
 
@@ -249,7 +249,7 @@ The vast majority of features in the dataset have close to zero impact on predic
 * Election related incidents
 
 ### It appears certain models can be trained to accurately forecast peaks associated with electoral periods beforehand
-* Further exploration is needed. It currently only works for a small set of variables and it is unclear whether their predictive power will persist. 
+* The potential has been shown in this regard, but futher exploration is needed. This currently only works for a small set of variables and it is unclear whether their predictive power will apply to future peaks of violence.
 
 ## Possible Next Steps
 
@@ -267,7 +267,6 @@ The vast majority of features in the dataset have close to zero impact on predic
 ### Add forecasts to Nepal Monitor Platform:
 * Display forecast estimates for select variables next to previous accuracy (r²), with 95% confidence interval
 * Significant web development would be needed to automate
-
 
 
 
