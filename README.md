@@ -205,7 +205,7 @@ To predict what will happen one week in the future, the model is fed what has ha
 This is done in sequence for every week using multiple variables. 
 ### Baseline
 
-![MLPRegressor Baseline](/images/MLP_baseline.png.png)
+![MLPRegressor Baseline](/images/MLP_baseline.png)
 
 ![MLPRegressor Baseline Scores](/images/MLP_baseline_scores.png)
 
